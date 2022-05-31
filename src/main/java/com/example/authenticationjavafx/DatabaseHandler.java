@@ -1,6 +1,5 @@
 package com.example.authenticationjavafx;
 
-
 import java.sql.*;
 
 public class DatabaseHandler extends Configs {

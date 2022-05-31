@@ -42,7 +42,7 @@ public class SignUpController {
             signUpButton.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/views/sample.fxml"));
+            loader.setLocation(getClass().getResource("sign-in.fxml"));
 
             try {
                 loader.load();
@@ -55,9 +55,7 @@ public class SignUpController {
             stage.setScene(new Scene(root));
             stage.show();
         });
-        signUpButton.setOnAction(actionEvent -> {
-            signUpNewUser();
-        });
+        signUpButton.setOnAction(actionEvent -> signUpNewUser());
     }
 
     private void signUpNewUser() {

@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.animations.Shake;
+import animations.Shake;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +18,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class Controller {
+public class SignInController {
 
     @FXML
     private ResourceBundle resources;
@@ -50,9 +50,7 @@ public class Controller {
                 System.out.println("Login and password is empty");
         });
 
-        LoginSignUpButton.setOnAction(actionEvent -> {
-            openNewScene("/sample/views/SignUp.fxml");
-        });
+        LoginSignUpButton.setOnAction(actionEvent -> openNewScene("sign-up.fxml"));
     }
 
     private void loginUser(String loginText, String loginPassword) {
@@ -72,12 +70,13 @@ public class Controller {
         }
 
         if (count >= 1){
-            openNewScene("/sample/views/home.fxml");
+            openNewScene("sign-up.fxml");
             try{
                 File file = new File("visitings.txt");
 
-                if (!file.exists())
+                if (!file.exists()) {
                     file.createNewFile();
+                }
                 PrintWriter pw = new PrintWriter(file);
                 pw.println(login_field.getText());
                 pw.println(password_field.getText());
