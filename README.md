@@ -10,6 +10,12 @@ JavaFX authorization application works with database(SQL Server), users can logi
 ### sign up page
 ![sign up page](https://i.imgur.com/1lozgne.png)
 
+## Resources used
+
+- [Microsoft SQl Server](https://www.microsoft.com/ru-ru/sql-server)
+- [Java](https://www.java.com/ru/)
+- [JavaFX](https://openjfx.io/)
+
 ## The schema:
 
 ### Users
